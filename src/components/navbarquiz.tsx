@@ -17,15 +17,14 @@ export default function NavbarQuiz() {
           <a href="/thesomat" className="text-gray-300 hover:text-white">
             Thesomat
           </a>
-          <>
-            //{" "}
+          <div>
             <Button as={Link} href="/login" variant="bordered" className="text-white">
               Login
             </Button>
             <Button as={Link} href="/register" variant="bordered" className="text-white">
               Register
             </Button>
-          </>
+          </div>
         </div>
       </div>
     </nav>
