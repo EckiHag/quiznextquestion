@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import NavbarQuiz from "../components/navbarquiz";
+import { NextUIProvider } from "@nextui-org/react";
+import { ToastContainer } from "react-toastify"; // ToastContainer importieren
+import "react-toastify/dist/ReactToastify.css"; // ToastContainer CSS importieren
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +20,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+        <body className={inter.className}>
+          <NavbarQuiz />
+          <NextUIProvider>
+            {children}
+          </NextUIProvider>
+          <ToastContainer // ToastContainer in den body einfügen
+            position="bottom-right"
+            hideProgressBar
+            className="z-50"
+          />
+        </body>
     </html>
   );
 }
