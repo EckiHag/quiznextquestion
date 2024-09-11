@@ -3,6 +3,9 @@ import Image from "next/image"
 import { auth, signOut } from "@/auth"
 import { Button } from "@nextui-org/button"
 import { FaRegSmile } from "react-icons/fa"
+
+
+
 export default async function Page() {
   const session = await auth()
 
@@ -14,7 +17,7 @@ export default async function Page() {
       <div className="flex items-center justify-center pt-8 w-72 text-center">Sprüche 3:13-14: Wohl dem Menschen, der Weisheit findet, dem Menschen, der Verstand erlangt! Denn es ist besser, sie zu erwerben, als Silber, und ihr Ertrag ist besser als Gold.</div>
 
       <Image src={logo} alt="Logo" width={300} height={300} className="animate-spin-slow" />
-      
+
     </div>
   )
 }

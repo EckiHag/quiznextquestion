@@ -50,7 +50,7 @@ function PageKirchenjahr() {
   }
 
   if (!isAdmin) {
-    return <p>Access Denied. You must be an admin to view this page.</p>; // Zugangsverweigerung
+    return <p>Access Denied. You must be of role ADMIN to view this page. If you are ADMIN please refresh the browser!</p>; // Zugangsverweigerung
   }
 
   return (

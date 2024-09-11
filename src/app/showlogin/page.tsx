@@ -3,6 +3,9 @@ import Image from "next/image"
 import { auth, signOut } from "@/auth"
 import { Button } from "@nextui-org/button"
 import { FaRegSmile } from "react-icons/fa"
+
+
+
 export default async function Page() {
   const session = await auth()
 
@@ -17,7 +20,6 @@ export default async function Page() {
           <form
             action={async () => {
               "use server"
-
               await signOut()
             }}
           >
