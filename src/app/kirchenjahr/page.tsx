@@ -6,7 +6,10 @@ import ModaleFrage from "../../components/modalefrage"
 import { datenkirchenjahr } from "../../fragen/Kirchenjahr"
 import Modal from "react-modal"
 
+import { useAdmin } from '@/hooks/useAdmin';
+
 function PageKirchenjahr() {
+  const { isAdmin, loading } = useAdmin(); 
   const [fragenUndAntworten, setFragenUndAntworten] = useState<any[]>(datenkirchenjahr)
   const [titel, setTitel] = useState<string>("für Gemeindekreise")
   const [currentFrage, setCurrentFrage] = useState<any>(null)
@@ -40,6 +43,14 @@ function PageKirchenjahr() {
 
   const handleCloseModal = () => {
     setShowFrage(false)
+  }
+
+  if (loading) {
+    return <p>Loading...</p>; // Ladesymbol während der Prüfung
+  }
+
+  if (!isAdmin) {
+    return <p>Access Denied. You must be an admin to view this page.</p>; // Zugangsverweigerung
   }
 
   return (

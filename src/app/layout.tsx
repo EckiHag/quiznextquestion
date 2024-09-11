@@ -1,10 +1,12 @@
+//layout.tsx
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import NavbarQuiz from "../components/navbarquiz";
 import { NextUIProvider } from "@nextui-org/react";
-import { ToastContainer } from "react-toastify"; // ToastContainer importieren
-import "react-toastify/dist/ReactToastify.css"; // ToastContainer CSS importieren
+import { SessionProvider } from "next-auth/react"; // SessionProvider importieren
+import { ToastContainer } from "react-toastify"; 
+import "react-toastify/dist/ReactToastify.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,17 +22,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-        <body className={inter.className}>
-          <NavbarQuiz />
-          <NextUIProvider>
+      <body className={inter.className}>
+        <NavbarQuiz />
+        <NextUIProvider>
+          <SessionProvider>
             {children}
-          </NextUIProvider>
-          <ToastContainer // ToastContainer in den body einfügen
-            position="bottom-right"
-            hideProgressBar
-            className="z-50"
-          />
-        </body>
+          </SessionProvider>
+        </NextUIProvider>
+        <ToastContainer
+          position="bottom-right"
+          hideProgressBar
+          className="z-50"
+        />
+      </body>
     </html>
   );
 }
