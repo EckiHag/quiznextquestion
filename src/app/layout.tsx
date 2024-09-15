@@ -2,7 +2,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import NavbarQuiz from "../components/navbarquiz";
+// import NavbarQuiz from "../components/navbarquiz";
+import Navbar from "@/components/navbar/TopNav";
 import { NextUIProvider } from "@nextui-org/react";
 import { SessionProvider } from "next-auth/react"; // SessionProvider importieren
 import { ToastContainer } from "react-toastify"; 
@@ -23,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <NavbarQuiz />
+        <Navbar />
         <NextUIProvider>
           <SessionProvider>
             {children}
