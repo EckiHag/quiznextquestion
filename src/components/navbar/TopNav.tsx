@@ -1,3 +1,5 @@
+
+
 import { Button, Navbar, NavbarBrand, NavbarContent } from "@nextui-org/react"
 import Link from "next/link"
 import React from "react"
@@ -26,7 +28,8 @@ export default async function TopNav() {
       </NavbarBrand>
       <NavbarContent justify="center">
         <NavLink href="/kirchenjahr" label="Kirchenjahr" />
-        <NavLink href="/thesomat<UserMenu user={session.user} />" label="Thesomat" />
+        <NavLink href="/thesomat" label="Thesomat" />
+        <NavLink href="/provakomat" label="Provakomat" />
         <SchuleMenu />
       </NavbarContent>
       <NavbarContent justify="end">

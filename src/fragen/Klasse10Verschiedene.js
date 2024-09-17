@@ -1,4 +1,4 @@
-export const klasse5Verschiedene = [
+export const Klasse10Verschiedene = [
   {
     Allgemeinwissen: [
       {

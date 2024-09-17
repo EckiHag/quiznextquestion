@@ -1,4 +1,4 @@
-export const klasse7Verschiedene = [
+export const Klasse7Verschiedene = [
   {
     Mathe: [
       { question: "Joker", options: ["Joker", "Joker", "Joker", "Joker"], answer: "jokerGif.gif" },

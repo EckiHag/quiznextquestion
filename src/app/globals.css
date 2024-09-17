@@ -4,9 +4,11 @@
 
 @layer components {
     .vertical-center {
+      height: calc(100vh - 64px);
+    }
+    .vertical-center-footer {
       height: calc(100vh - 164px);
     }
-  
     .bg-white {
       background-color: #f0f0f0; /* oder jede andere gewünschte Farbe */
     }

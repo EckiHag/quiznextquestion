@@ -6,7 +6,6 @@ import { Session } from "next-auth"
 import Link from "next/link"
 import React from "react"
 
-
 export default function SchuleMenu() {
   return (
     <Dropdown placement="bottom-end">
@@ -19,12 +18,21 @@ export default function SchuleMenu() {
             Schule
           </DropdownItem>
         </DropdownSection>
-        <DropdownItem as={Link} href="/users/user/edit">
-          Klasse 5 Verschiedene
-        </DropdownItem>
-        <DropdownItem as={Link} href="/users/user/edit">
-          Klasse 7 Verschiedene
-        </DropdownItem>
+        <DropdownItem as={Link} href="/quiz/klasse5verschiedene">
+        Klasse 5 Verschiedene
+      </DropdownItem>
+      <DropdownItem as={Link} href="/quiz/klasse7verschiedene">
+        Klasse 7 Verschiedene
+      </DropdownItem>
+      <DropdownItem as={Link} href="/quiz/klasse9verschiedene">
+        Klasse 9 Verschiedene
+      </DropdownItem>
+      <DropdownItem as={Link} href="/quiz/klasse10verschiedene">
+        Klasse 10 Verschiedene
+      </DropdownItem>
+      <DropdownItem as={Link} href="/quiz/klasse11q1verschiedene">
+        Klasse 11 / Q1 Verschiedene
+      </DropdownItem>
       </DropdownMenu>
     </Dropdown>
   )

@@ -1,49 +1,67 @@
 "use client"
 
-import React, { useState } from "react"
-import { Footer } from "../../components/footer"
-import ModaleFrage from "../../components/modalefrage"
-import { datenkirchenjahr } from "../../fragen/Kirchenjahr"
-import Modal from "react-modal"
-
+import React, { useState, useEffect } from "react"
+import { Footer } from "./footer"
+import ModaleFrage from "./modalefrage"
 import { useAdmin } from '@/hooks/useAdmin';
+import Modal from 'react-modal';
 
-function PageKirchenjahr() {
+
+interface PageQuizSinDataProps {
+  daten: any[];
+  titel: string
+}
+
+function PageQuizSinData({ daten, titel }: PageQuizSinDataProps) {
+  console.log("Titel: ", titel)
   const { isAdmin, loading } = useAdmin(); 
-  const [fragenUndAntworten, setFragenUndAntworten] = useState<any[]>(datenkirchenjahr)
-  const [titel, setTitel] = useState<string>("für Gemeindekreise")
-  const [currentFrage, setCurrentFrage] = useState<any>(null)
-  const [showFrage, setShowFrage] = useState(false)
-  const [clickedCells, setClickedCells] = useState<number[][]>([])
+  const [fragenUndAntworten, setFragenUndAntworten] = useState<any[]>(daten);
 
-  const themenAnzahl = fragenUndAntworten.length
-  const themenNamen = fragenUndAntworten.map((thema) => Object.keys(thema)[0])
+  const [currentFrage, setCurrentFrage] = useState<any>(null);
+  const [showFrage, setShowFrage] = useState(false);
+  const [clickedCells, setClickedCells] = useState<number[][]>([]);
+
+  const themenAnzahl = fragenUndAntworten.length;
+  const themenNamen = fragenUndAntworten.map((thema) => Object.keys(thema)[0]);
+
+  // der Fehler ist immer noch da
+  // dieser useEffect wurde eingebaut, weil es sonst eine Fehlermeldung zu einem bekannten Fehler von react-modal kommt
+  useEffect(() => {
+    // Sicherstellen, dass Modal.setAppElement nur auf der Client-Seite ausgeführt wird
+    if (typeof window !== 'undefined') {
+      const appElement = document.getElementById('__next');
+      if (appElement) {
+        Modal.setAppElement(appElement);
+      }
+    }
+  }, []);
+
 
   const holFrage = (spalte: number, zeile: number) => {
-    const fach = fragenUndAntworten[spalte]
-    const schluessel = Object.keys(fach)[0]
-    console.log("Fach:", fach)
-    return fach[schluessel][zeile]
-  }
+    const fach = fragenUndAntworten[spalte];
+    const schluessel = Object.keys(fach)[0];
+    console.log("Fach:", fach);
+    return fach[schluessel][zeile];
+  };
 
   const handleClick = (i: number, j: number) => {
-    setClickedCells((prevCells) => [...prevCells, [i, j]])
-    const frage = holFrage(j, i)
+    setClickedCells((prevCells) => [...prevCells, [i, j]]);
+    const frage = holFrage(j, i);
     if (frage && frage.question && frage.options) {
-      setCurrentFrage(frage)
-      setShowFrage(true)
+      setCurrentFrage(frage);
+      setShowFrage(true);
     } else {
-      setShowFrage(false)
+      setShowFrage(false);
     }
-  }
+  };
 
   const handleReset = () => {
-    setClickedCells([])
-  }
+    setClickedCells([]);
+  };
 
   const handleCloseModal = () => {
-    setShowFrage(false)
-  }
+    setShowFrage(false);
+  };
 
   if (loading) {
     return <p>Loading...</p>; // Ladesymbol während der Prüfung
@@ -135,8 +153,10 @@ function PageKirchenjahr() {
 
       </div>
 
-    </div>      <Footer /></>
-  )
+    </div>      
+    <Footer />
+    </>
+  );
 }
 
-export default PageKirchenjahr
+export default PageQuizSinData;

@@ -1,4 +1,4 @@
-export const klasse11Q1Verschiedene = [
+export const Klasse11Q1Verschiedene = [
   {
     "Reich Gottes": [
       {

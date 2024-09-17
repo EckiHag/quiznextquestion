@@ -11,7 +11,7 @@ export default async function Page() {
 
 
   return (
-    <div className="flex flex-col justify-center items-center h-screen p-8 pt-14 bg-gray-500">
+    <div className="flex flex-col justify-center items-center vertical-center p-8 pt-14 bg-gray-500">
       <div className="font-semibold text-4xl">Quiz by EckiHag 2024!</div>
       <h3>Designed by Next.js!</h3>
       <div className="flex items-center justify-center pt-8 w-72 text-center">Sprüche 3:13-14: Wohl dem Menschen, der Weisheit findet, dem Menschen, der Verstand erlangt! Denn es ist besser, sie zu erwerben, als Silber, und ihr Ertrag ist besser als Gold.</div>

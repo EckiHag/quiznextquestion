@@ -1,4 +1,4 @@
-export const klasse9Verschiedene = [
+export const Klasse9Verschiedene = [
   {
     Mathematik: [
       {
