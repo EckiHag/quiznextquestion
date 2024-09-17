@@ -4,10 +4,10 @@
 import { useParams } from 'next/navigation';
 import PageQuizSinData from '@/components/quizsindata';
 import { Klasse5Verschiedene } from '@/fragen/Klasse5Verschiedene';
-import { Klasse7Verschiedene } from '@/fragen//klasse7Verschiedene';
-import { Klasse9Verschiedene } from '@/fragen/klasse9Verschiedene';
-import { Klasse10Verschiedene } from '@/fragen/klasse10Verschiedene';
-import { Klasse11Q1Verschiedene } from '@/fragen/klasse11Q1Verschiedene';
+import { Klasse7Verschiedene } from '@/fragen//Klasse7Verschiedene';
+import { Klasse9Verschiedene } from '@/fragen/Klasse9Verschiedene';
+import { Klasse10Verschiedene } from '@/fragen/Klasse10Verschiedene';
+import { Klasse11Q1Verschiedene } from '@/fragen/Klasse11Q1Verschiedene';
 
 const QuizPage = () => {
   const params = useParams(); // Holt die Parameter der Route
