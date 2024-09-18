@@ -8,6 +8,7 @@ import NavLink from "./NavLink"
 import { auth } from "@/auth"
 import UserMenu from "./UserMenu"
 import SchuleMenu from "./SchuleMenu"
+import GemeindeMenu from "./GemeindeMenu"
 
 export default async function TopNav() {
   const session = await auth()
@@ -27,10 +28,10 @@ export default async function TopNav() {
         </div>
       </NavbarBrand>
       <NavbarContent justify="center">
-        <NavLink href="/kirchenjahr" label="Kirchenjahr" />
         <NavLink href="/thesomat" label="Thesomat" />
         <NavLink href="/provakomat" label="Provakomat" />
         <SchuleMenu />
+        <GemeindeMenu />
       </NavbarContent>
       <NavbarContent justify="end">
         {session?.user ? (

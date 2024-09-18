@@ -1,4 +1,4 @@
-export const datenkirchenjahr = [
+export const Kirchenjahr = [
   {
     Advent: [
       { question: "Wie viele Sonntage umfasst der Advent?", options: ["2", "3", "4", "5"], answer: "3" },

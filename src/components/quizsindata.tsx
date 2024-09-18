@@ -26,15 +26,15 @@ function PageQuizSinData({ daten, titel }: PageQuizSinDataProps) {
 
   // der Fehler ist immer noch da:
   // dieser useEffect wurde eingebaut, weil es sonst eine Fehlermeldung zu einem bekannten Fehler von react-modal kommt
-  useEffect(() => {
-    // Sicherstellen, dass Modal.setAppElement nur auf der Client-Seite ausgeführt wird
-    if (typeof window !== 'undefined') {
-      const appElement = document.getElementById('__next');
-      if (appElement) {
-        Modal.setAppElement(appElement);
-      }
-    }
-  }, []);
+  // useEffect(() => {
+  //   // Sicherstellen, dass Modal.setAppElement nur auf der Client-Seite ausgeführt wird
+  //   if (typeof window !== 'undefined') {
+  //     const appElement = document.getElementById('__next');
+  //     if (appElement) {
+  //       Modal.setAppElement(appElement);
+  //     }
+  //   }
+  // }, []);
 
 
   const holFrage = (spalte: number, zeile: number) => {
@@ -107,6 +107,7 @@ function PageQuizSinData({ daten, titel }: PageQuizSinDataProps) {
           <Modal
             isOpen={showFrage}
             onRequestClose={handleCloseModal}
+            ariaHideApp={false}
             contentLabel="Frage Modal"
             style={{
               content: {

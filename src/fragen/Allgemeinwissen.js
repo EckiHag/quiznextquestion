@@ -1,4 +1,4 @@
-export const allgemeinwissen = [
+export const Allgemeinwissen = [
   {
     geographie: [
       { question: "Welches ist der größte Ozean der Welt?", options: ["Atlantischer Ozean", "Indischer Ozean", "Arktischer Ozean", "Pazifischer Ozean"], answer: "4" },
