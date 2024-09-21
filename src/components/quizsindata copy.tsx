@@ -24,6 +24,19 @@ function PageQuizSinData({ daten, titel }: PageQuizSinDataProps) {
   const themenAnzahl = fragenUndAntworten.length;
   const themenNamen = fragenUndAntworten.map((thema) => Object.keys(thema)[0]);
 
+  // der Fehler ist immer noch da:
+  // dieser useEffect wurde eingebaut, weil es sonst eine Fehlermeldung zu einem bekannten Fehler von react-modal kommt
+  // useEffect(() => {
+  //   // Sicherstellen, dass Modal.setAppElement nur auf der Client-Seite ausgeführt wird
+  //   if (typeof window !== 'undefined') {
+  //     const appElement = document.getElementById('__next');
+  //     if (appElement) {
+  //       Modal.setAppElement(appElement);
+  //     }
+  //   }
+  // }, []);
+
+
   const holFrage = (spalte: number, zeile: number) => {
     const fach = fragenUndAntworten[spalte];
     const schluessel = Object.keys(fach)[0];

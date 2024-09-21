@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 // import NavbarQuiz from "../components/navbarquiz";
-import Navbar from "@/components/navbar/TopNav";
+import Navbar from "@/components/navbar/TopNavServer";
 import { NextUIProvider } from "@nextui-org/react";
 import { SessionProvider } from "next-auth/react"; // SessionProvider importieren
 import { ToastContainer } from "react-toastify"; 

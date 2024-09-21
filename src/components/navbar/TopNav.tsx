@@ -1,5 +1,3 @@
-
-
 import { Button, Navbar, NavbarBrand, NavbarContent } from "@nextui-org/react"
 import Link from "next/link"
 import React from "react"
