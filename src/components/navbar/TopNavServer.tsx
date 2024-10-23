@@ -20,12 +20,12 @@ export default async function TopNav() {
         item: ["text-xl", "text-white", "uppercase", "data-[active=true]:text-yellow-200"],
       }}
     >
-      <NavbarBrand as={Link} href="/" className="min-w-[300px]">
-        <GiMatchTip size={40} className="text-gray-200" />
-        <div className="font-bold text-3xl flex">
-          <span className="text-gray-900">Quiz</span>
-          <span className="text-gray-200">by EckiHag</span>
-        </div>
+      <NavbarBrand as={Link} href="/" className="min-w-[200px] sm:min-w-[300px]">
+      <GiMatchTip size={30} className="text-gray-200 sm:size-40" />  {/* Verkleinere das Icon auf kleineren Bildschirmen */}
+  <div className="font-bold text-xl sm:text-3xl flex">           {/* Verkleinere den Text auf kleineren Bildschirmen */}
+    <span className="text-gray-900">Quiz</span>
+    <span className="text-gray-200">by EckiHag</span>
+  </div>
       </NavbarBrand>
 
       {/* Mobile Menu for small screens */}
