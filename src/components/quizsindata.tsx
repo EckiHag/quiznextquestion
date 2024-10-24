@@ -5,7 +5,7 @@ import { Footer } from "./footer"
 import ModaleFrage from "./modalefrage"
 import { useAdmin } from '@/hooks/useAdmin';
 import Modal from 'react-modal';
-
+import Image from 'next/image';
 
 interface PageQuizSinDataProps {
   daten: any[];
@@ -79,20 +79,26 @@ function PageQuizSinData({ daten, titel }: PageQuizSinDataProps) {
   <tbody>
     {[...Array(6)].map((_, i) => (
       <tr key={i}>
-        <td className="px-4 py-2 border text-xs sm:text-lg">{20 + i * 20}</td>
+        <td className="px-1 sm:px-4 py-2 border text-xs sm:text-lg">{20 + i * 20}</td>
         {[...Array(themenAnzahl)].map((_, j) => (
           <td
             key={j}
-            className={`px-4 py-2 border ${
+            className={`px-2 sm:px-4 py-1 sm:py-2 border ${
               clickedCells.some((cell) => cell[0] === i && cell[1] === j) ? "bg-yellow-300" : ""
             } cursor-pointer text-xs sm:text-sm`} 
             onClick={() => handleClick(i, j)}
           >
-            <img
-              src="../icons/Rocket.png"
-              className="mx-auto w-4 sm:w-12"
+          <div className="flex justify-center items-center h-full">
+            <Image
+              src="/icons/Rocket.png"
+              width={24}  // Set the smaller size for mobile screens
+              height={24}  // Must match the width
               alt="Quiz Icon"
+              className="w-6 sm:w-12 h-6 sm:h-12"  // Adjust sizes for different screens
+              sizes="(max-width: 640px) 24px, 48px"
+              priority
             />
+          </div>
           </td>
         ))}
       </tr>
