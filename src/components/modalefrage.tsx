@@ -58,7 +58,7 @@ export default function ModaleFrage({ frage }: ModaleFrageProps) {
     return (
       <div className="flex flex-col items-center bg-[#005a6e] h-full">
         <div className="h-[70vh] w-[90vw] text-white bg-[#005a6e] px-12 sm:px-24">
-        <div className="text-center text-1xl sm:text-4xl mt-2">Frage: {frage.question}</div>
+        <div className="text-center text-xs sm:text-4xl mt-2">Frage: {frage.question}</div>
 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4">
   {frage.options.map((option, index) => (
     <button
@@ -74,8 +74,8 @@ export default function ModaleFrage({ frage }: ModaleFrageProps) {
 
           {showAnswer && (
             <div>
-<p className="text-xl sm:text-3xl mt-5 text-green-500">{message1}</p>
-<p className="text-xl sm:text-3xl mt-5">{message2}</p>
+<p className="text-xs sm:text-3xl mt-5 text-green-500">{message1}</p>
+<p className="text-xs sm:text-3xl mt-5">{message2}</p>
 
             </div>
           )}

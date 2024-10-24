@@ -11,7 +11,7 @@ export default async function Page() {
 
 
   return (
-    <div className="flex flex-col justify-center items-center h-screen p-8 pt-14 bg-gray-500">
+    <div className="flex flex-col justify-center items-center h-full p-8 pt-14 bg-gray-500">
       <h3 className="text-2xl font-semibold">User session data:</h3>
       {session ? (
         <div>

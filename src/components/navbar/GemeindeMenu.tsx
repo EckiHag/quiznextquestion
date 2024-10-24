@@ -23,6 +23,9 @@ export default function SchuleMenu() {
       <DropdownItem as={Link} href="/quiz/kirchenjahr">
         Kirchenjahr
       </DropdownItem>
+      <DropdownItem as={Link} href="/quiz/spanien">
+        Spanien
+      </DropdownItem>
       </DropdownMenu>
     </Dropdown>
   )

@@ -10,6 +10,7 @@ import { Klasse10Verschiedene } from '@/fragen/Klasse10Verschiedene';
 import { Klasse11Q1Verschiedene } from '@/fragen/Klasse11Q1Verschiedene';
 import { Allgemeinwissen } from '@/fragen/Allgemeinwissen';
 import { Kirchenjahr } from '@/fragen/Kirchenjahr';
+import { Spanien } from '@/fragen/Spanien';
 
 const QuizPage = () => {
   const params = useParams(); // Holt die Parameter der Route
@@ -40,14 +41,18 @@ const QuizPage = () => {
         daten = Klasse11Q1Verschiedene;
         titel = "Klasse 11 / Q1 Verschiedene"
         break;
-        case 'allgemeinwissen':
+    case 'allgemeinwissen':
           daten = Allgemeinwissen;
           titel = "Allgemeinwissen"
           break;
-          case 'kirchenjahr':
+    case 'kirchenjahr':
             daten = Kirchenjahr;
             titel = "Kirchenjahr"
             break;
+    case 'spanien':
+              daten = Spanien;
+              titel = "Spanien"
+              break;        
     default:
       daten = []; // Fallback oder Fehlerbehandlung
       titel = "leer" }

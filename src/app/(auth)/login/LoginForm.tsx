@@ -27,7 +27,7 @@ export default function LoginForm() {
     const result = await signInUser(data)
     console.log("onSubmit LoginForm result: ", result)
     if (result.status === "success") {
-      router.push("/kirchenjahr")
+      router.push("/showlogin")
       router.refresh()
     } 
     else 
