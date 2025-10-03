@@ -3,7 +3,7 @@ export const Tansania = [
     Geografie: [
       { question: "Was ist die Hauptstadt von Tansania?", options: ["Dodoma", "Dar es Salaam", "Arusha", "Mwanza"], answer: "1" },
       { question: "Welcher See liegt im Westen Tansanias?", options: ["Victoriasee", "Tanganjikasee", "Malawisee", "Turkanasee"], answer: "2" },
-      { question: "Welcher Berg ist der höchste in Afrika und liegt in Tansania?", options: ["Mount Meru", "Mount Kenya", "Kilimandscharo", "Rwenzori"], answer: "3" },
+      { question: "Joker", options: ["Joker", "Joker", "Joker", "Joker"], answer: "jokerGif.gif" },
       { question: "Welche Inselgruppe gehört zu Tansania?", options: ["Sansibar", "Kapverden", "Seychellen", "Komoren"], answer: "1" },
       { question: "Mit welchem Land grenzt Tansania NICHT?", options: ["Uganda", "Kenia", "Mosambik", "Somalia"], answer: "4" },
       { question: "Welche Großstadt liegt an der Küste Tansanias?", options: ["Arusha", "Dodoma", "Dar es Salaam", "Mwanza"], answer: "3" },
@@ -12,7 +12,7 @@ export const Tansania = [
   },
   {
     Geschichte: [
-      { question: "Welches Land war Kolonialmacht in Tansania bis 1918?", options: ["Frankreich", "Deutschland", "Portugal", "England"], answer: "2" },
+      { question: "Joker", options: ["Joker", "Joker", "Joker", "Joker"], answer: "jokerGif.gif" },
       { question: "Wie hieß Tansania vor 1964?", options: ["Tanganyika und Sansibar", "Zentralafrika", "Ostafrika-Union", "Kilimanrepublik"], answer: "1" },
       { question: "Wann erlangte Tansania die Unabhängigkeit?", options: ["1955", "1961", "1964", "1970"], answer: "2" },
       { question: "Wer war der erste Präsident von Tansania?", options: ["Julius Nyerere", "John Magufuli", "Samia Hassan", "Ali Karume"], answer: "1" },
@@ -37,12 +37,12 @@ export const Tansania = [
         ],
         answer: "1",
       },
-      { question: "Welche Tierwanderung ist weltberühmt in der Serengeti?", options: ["Elefantenwanderung", "Zebrasafari", "Gnuwanderung", "Straußenlauf"], answer: "3" },
       { question: "Welcher Nationalpark ist bekannt für große Elefantenherden?", options: ["Ruaha", "Tarangire", "Ngorongoro", "Serengeti"], answer: "2" },
       { question: "Welches Tier ist das Nationalsymbol Tansanias?", options: ["Löwe", "Giraffe", "Nashorn", "Zebra"], answer: "2" },
       { question: "Welcher Nationalpark ist UNESCO-Weltnaturerbe?", options: ["Ngorongoro-Krater", "Arusha-Nationalpark", "Mikumi", "Katavi"], answer: "1" },
       { question: "Welche Raubkatze kommt häufig in der Serengeti vor?", options: ["Tiger", "Gepard", "Jaguar", "Puma"], answer: "2" },
       { question: "Wo findet man Flamingos in Tansania?", options: ["Lake Natron", "Lake Victoria", "Lake Malawi", "Lake Tanganyika"], answer: "1" },
+      { question: "Joker", options: ["Joker", "Joker", "Joker", "Joker"], answer: "jokerGif.gif" },
     ],
   },
   {
@@ -67,14 +67,14 @@ export const Tansania = [
       { question: "Wie viele Verwaltungsregionen hat Tansania?", options: ["15", "31", "45", "50"], answer: "2" },
       { question: "Welches Parlament tagt in Dodoma?", options: ["Nationalversammlung", "Bundesrat", "Volkskongress", "House of Lords"], answer: "1" },
       { question: "Welche Partei dominierte jahrzehntelang die Politik?", options: ["CDM", "CCM", "ANC", "KMT"], answer: "2" },
-      { question: "Welche Währung nutzt Tansania?", options: ["Shilling", "Rand", "Kwacha", "Dollar"], answer: "1" },
+      { question: "Joker", options: ["Joker", "Joker", "Joker", "Joker"], answer: "jokerGif.gif" },
       { question: "Welche Flaggenfarben hat Tansania?", options: ["Grün, Gelb, Schwarz, Blau", "Rot, Weiß, Schwarz", "Blau, Gelb, Rot", "Grün, Weiß, Rot"], answer: "1" },
     ],
   },
   {
     Wirtschaft_und_Alltag: [
       { question: "Was ist das wichtigste Exportprodukt Tansanias?", options: ["Kaffee", "Tee", "Gold", "Baumwolle"], answer: "3" },
-      { question: "Welcher Wirtschaftszweig ist besonders bedeutend?", options: ["Tourismus", "Industrie", "IT", "Chemie"], answer: "1" },
+      { question: "Joker", options: ["Joker", "Joker", "Joker", "Joker"], answer: "jokerGif.gif" },
       { question: "Was ist das Grundnahrungsmittel vieler Menschen in Tansania?", options: ["Reis", "Maisbrei (Ugali)", "Kartoffeln", "Brot"], answer: "2" },
       { question: "Was bauen Kleinbauern in Tansania häufig an?", options: ["Kaffee und Tee", "Wein und Oliven", "Tabak und Hanf", "Bananen und Trauben"], answer: "1" },
       { question: "Welcher Rohstoff wird im Süden Tansanias gefördert?", options: ["Gas", "Eisen", "Diamanten", "Kohle"], answer: "1" },
