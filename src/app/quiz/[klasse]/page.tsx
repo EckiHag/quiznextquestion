@@ -1,16 +1,17 @@
 //quiz/[klasse].tsx
-"use client"
+"use client";
 
-import { useParams } from 'next/navigation';
-import PageQuizSinData from '@/components/quizsindata';
-import { Klasse5Verschiedene } from '@/fragen/Klasse5Verschiedene';
-import { Klasse7Verschiedene } from '@/fragen//Klasse7Verschiedene';
-import { Klasse9Verschiedene } from '@/fragen/Klasse9Verschiedene';
-import { Klasse10Verschiedene } from '@/fragen/Klasse10Verschiedene';
-import { Klasse11Q1Verschiedene } from '@/fragen/Klasse11Q1Verschiedene';
-import { Allgemeinwissen } from '@/fragen/Allgemeinwissen';
-import { Kirchenjahr } from '@/fragen/Kirchenjahr';
-import { Spanien } from '@/fragen/Spanien';
+import { useParams } from "next/navigation";
+import PageQuizSinData from "@/components/quizsindata";
+import { Klasse5Verschiedene } from "@/fragen/Klasse5Verschiedene";
+import { Klasse7Verschiedene } from "@/fragen//Klasse7Verschiedene";
+import { Klasse9Verschiedene } from "@/fragen/Klasse9Verschiedene";
+import { Klasse10Verschiedene } from "@/fragen/Klasse10Verschiedene";
+import { Klasse11Q1Verschiedene } from "@/fragen/Klasse11Q1Verschiedene";
+import { Allgemeinwissen } from "@/fragen/Allgemeinwissen";
+import { Kirchenjahr } from "@/fragen/Kirchenjahr";
+import { Spanien } from "@/fragen/Spanien";
+import { Tansania } from "@/fragen/Tansania";
 
 const QuizPage = () => {
   const params = useParams(); // Holt die Parameter der Route
@@ -21,41 +22,46 @@ const QuizPage = () => {
 
   // Entscheide, welche Daten geladen werden sollen
   switch (klasse) {
-    case 'klasse5verschiedene':
+    case "klasse5verschiedene":
       daten = Klasse5Verschiedene;
-      titel = "Klasse 5 Verschiedene"
+      titel = "Klasse 5 Verschiedene";
       break;
-    case 'klasse7verschiedene':
+    case "klasse7verschiedene":
       daten = Klasse7Verschiedene;
-      titel = "Klasse 7 Verschiedene"
+      titel = "Klasse 7 Verschiedene";
       break;
-    case 'klasse9verschiedene':
+    case "klasse9verschiedene":
       daten = Klasse9Verschiedene;
-      titel = "Klasse 9 Verschiedene"
+      titel = "Klasse 9 Verschiedene";
       break;
-    case 'klasse10verschiedene':
+    case "klasse10verschiedene":
       daten = Klasse10Verschiedene;
-      titel = "Klasse 10 Verschiedene"
+      titel = "Klasse 10 Verschiedene";
       break;
-    case 'klasse11q1verschiedene':
-        daten = Klasse11Q1Verschiedene;
-        titel = "Klasse 11 / Q1 Verschiedene"
-        break;
-    case 'allgemeinwissen':
-          daten = Allgemeinwissen;
-          titel = "Allgemeinwissen"
-          break;
-    case 'kirchenjahr':
-            daten = Kirchenjahr;
-            titel = "Kirchenjahr"
-            break;
-    case 'spanien':
-              daten = Spanien;
-              titel = "Spanien"
-              break;        
+    case "klasse11q1verschiedene":
+      daten = Klasse11Q1Verschiedene;
+      titel = "Klasse 11 / Q1 Verschiedene";
+      break;
+    case "allgemeinwissen":
+      daten = Allgemeinwissen;
+      titel = "Allgemeinwissen";
+      break;
+    case "kirchenjahr":
+      daten = Kirchenjahr;
+      titel = "Kirchenjahr";
+      break;
+    case "spanien":
+      daten = Spanien;
+      titel = "Spanien";
+      break;
+    case "tansania":
+      daten = Tansania;
+      titel = "Tansania";
+      break;
     default:
       daten = []; // Fallback oder Fehlerbehandlung
-      titel = "leer" }
+      titel = "leer";
+  }
 
   // Übergib die Daten an die Komponente
   return <PageQuizSinData daten={daten} titel={titel} />;
