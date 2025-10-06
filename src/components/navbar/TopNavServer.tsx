@@ -1,16 +1,16 @@
-import { Button, Navbar, NavbarBrand, NavbarContent } from "@nextui-org/react"
-import Link from "next/link"
-import React from "react"
-import { GiMatchTip } from "react-icons/gi"
-import NavLink from "./NavLink"
-import { auth } from "@/auth"
-import UserMenu from "./UserMenu"
-import SchuleMenu from "./SchuleMenu"
-import GemeindeMenu from "./GemeindeMenu"
-import MobileMenu from "./MobileMenu" // Client-Komponente für das Hamburger-Menü
+import { Button, Navbar, NavbarBrand, NavbarContent } from "@nextui-org/react";
+import Link from "next/link";
+import React from "react";
+import { GiMatchTip } from "react-icons/gi";
+import NavLink from "./NavLink";
+import { auth } from "@/auth";
+import UserMenu from "./UserMenu";
+import SchuleMenu from "./SchuleMenu";
+import GemeindeMenu from "./GemeindeMenu";
+import MobileMenu from "./MobileMenu"; // Client-Komponente für das Hamburger-Menü
 
 export default async function TopNav() {
-  const session = await auth()
+  const session = await auth();
 
   return (
     <Navbar
@@ -21,11 +21,13 @@ export default async function TopNav() {
       }}
     >
       <NavbarBrand as={Link} href="/" className="min-w-[200px] sm:min-w-[300px]">
-      <GiMatchTip size={30} className="text-gray-200 sm:size-40" />  {/* Verkleinere das Icon auf kleineren Bildschirmen */}
-  <div className="font-bold text-xl sm:text-3xl flex">           {/* Verkleinere den Text auf kleineren Bildschirmen */}
-    <span className="text-gray-900">Quiz</span>
-    <span className="text-gray-200">by EckiHag</span>
-  </div>
+        <GiMatchTip size={30} className="text-gray-200 sm:size-40" /> {/* Verkleinere das Icon auf kleineren Bildschirmen */}
+        <div className="font-bold text-xl sm:text-3xl flex">
+          {" "}
+          {/* Verkleinere den Text auf kleineren Bildschirmen */}
+          <span className="text-gray-900">Quiz</span>
+          <span className="text-gray-200">by EckiHag</span>
+        </div>
       </NavbarBrand>
 
       {/* Mobile Menu for small screens */}
@@ -38,6 +40,7 @@ export default async function TopNav() {
         <NavbarContent justify="center">
           <NavLink href="/thesomat" label="Thesomat" />
           <NavLink href="/provakomat" label="Provakomat" />
+          <NavLink href="/moralomat" label="Moralomat" />
           <SchuleMenu />
           <GemeindeMenu />
         </NavbarContent>
@@ -57,5 +60,5 @@ export default async function TopNav() {
         </NavbarContent>
       </div>
     </Navbar>
-  )
+  );
 }

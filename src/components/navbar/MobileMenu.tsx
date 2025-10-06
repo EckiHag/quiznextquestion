@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useState } from "react";
 import { Button, NavbarContent } from "@nextui-org/react";
@@ -42,13 +42,12 @@ export default function MobileMenu({ session }: MobileMenuProps) {
 
       {/* Sidebar (off-canvas menu) */}
       <div
-        className={`fixed top-0 left-0 h-full bg-gray-800 z-50 transform ${
-          isMenuOpen ? "translate-x-0" : "-translate-x-full"
-        } transition-transform duration-300 ease-in-out w-64`}
+        className={`fixed top-0 left-0 h-full bg-gray-800 z-50 transform ${isMenuOpen ? "translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out w-64`}
       >
         <div className="flex flex-col items-start p-4 space-y-4 text-white bg-zinc-700">
           <NavLink href="/thesomat" label="Thesomat" onClick={closeMenu} />
           <NavLink href="/provakomat" label="Provakomat" onClick={closeMenu} />
+          <NavLink href="/moralomat" label="Moralomat" onClick={closeMenu} />
           <SchuleMenu />
           <GemeindeMenu />
           <div className="mt-auto">

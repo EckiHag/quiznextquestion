@@ -14,7 +14,7 @@ export const Tansania = [
     Geschichte: [
       { question: "Joker", options: ["Joker", "Joker", "Joker", "Joker"], answer: "jokerGif.gif" },
       { question: "Wie hieß Tansania vor 1964?", options: ["Tanganyika und Sansibar", "Zentralafrika", "Ostafrika-Union", "Kilimanrepublik"], answer: "1" },
-      { question: "Wann erlangte Tansania die Unabhängigkeit?", options: ["1955", "1961", "1964", "1970"], answer: "2" },
+      { question: "Wann erlangte Tanganjika die Unabhängigkeit?", options: ["1955", "1961", "1964", "1970"], answer: "2" },
       { question: "Wer war der erste Präsident von Tansania?", options: ["Julius Nyerere", "John Magufuli", "Samia Hassan", "Ali Karume"], answer: "1" },
       { question: "Mit welchem Nachbarland führte Tansania 1978/79 Krieg?", options: ["Uganda", "Kenia", "Ruanda", "Malawi"], answer: "1" },
       { question: "Wie nannte man die sozialistische Politik von Nyerere?", options: ["Apartheid", "Ujamaa", "Ubuntu", "Maji Maji"], answer: "2" },

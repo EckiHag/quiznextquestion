@@ -1,15 +1,15 @@
-import { Button, Navbar, NavbarBrand, NavbarContent } from "@nextui-org/react"
-import Link from "next/link"
-import React from "react"
-import { GiMatchTip } from "react-icons/gi"
-import NavLink from "./NavLink"
-import { auth } from "@/auth"
-import UserMenu from "./UserMenu"
-import SchuleMenu from "./SchuleMenu"
-import GemeindeMenu from "./GemeindeMenu"
+import { Button, Navbar, NavbarBrand, NavbarContent } from "@nextui-org/react";
+import Link from "next/link";
+import React from "react";
+import { GiMatchTip } from "react-icons/gi";
+import NavLink from "./NavLink";
+import { auth } from "@/auth";
+import UserMenu from "./UserMenu";
+import SchuleMenu from "./SchuleMenu";
+import GemeindeMenu from "./GemeindeMenu";
 
 export default async function TopNav() {
-  const session = await auth()
+  const session = await auth();
   return (
     <Navbar
       maxWidth="xl"
@@ -28,6 +28,7 @@ export default async function TopNav() {
       <NavbarContent justify="center">
         <NavLink href="/thesomat" label="Thesomat" />
         <NavLink href="/provakomat" label="Provakomat" />
+        <NavLink href="/moralomat" label="Moralomat" />
         <SchuleMenu />
         <GemeindeMenu />
       </NavbarContent>
@@ -46,5 +47,5 @@ export default async function TopNav() {
         )}
       </NavbarContent>
     </Navbar>
-  )
+  );
 }
